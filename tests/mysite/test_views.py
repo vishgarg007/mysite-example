@@ -1,3 +1,8 @@
+# test_views.py
+
 def test_index_ok(client):
-    response = client.get('/banana')  # Doesn't exist
+    # Make a GET request to / and store the response object
+    # using the Django test client.
+    response = client.get('/')
+    # Assert that the status_code is 200 (OK)
     assert response.status_code == 200
